@@ -18,11 +18,11 @@ from datetime import *
 from dateutil.parser import parse
 from mongo import *
 
-from colorthief import ColorThief
+#from colorthief import ColorThief
 import discord
 from discord.ext import commands
 
-class Ctfs():
+class Ctfs(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -248,11 +248,14 @@ class Ctfs():
                 #     fd = urlopen(default_image)
                 fd = urlopen(default_image)
                 f = io.BytesIO(fd.read())
-                color_thief = ColorThief(f)
-                rgb_color = color_thief.get_color(quality=49)
-                hexed = str(rgb2hex(rgb_color[0], rgb_color[1], rgb_color[2])).replace('#', '')
-                f_color = int(hexed, 16)
-                embed = discord.Embed(title=ctf_title, description=ctf_link, color=f_color)
+
+                # Wasnt able to install ColorThief
+                # color_thief = ColorThief(f)
+                # rgb_color = color_thief.get_color(quality=49)
+                # hexed = str(rgb2hex(rgb_color[0], rgb_color[1], rgb_color[2])).replace('#', '')
+                # f_color = int(hexed, 16)
+                #embed = discord.Embed(title=ctf_title, description=ctf_link, color=f_color)
+                embed = discord.Embed(title=ctf_title, description=ctf_link)
                 
                 if ctf_image != '':
                     embed.set_thumbnail(url=ctf_image)
