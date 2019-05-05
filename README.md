@@ -6,6 +6,19 @@
 \
 [Join the support server](https://discord.gg/yf8E2s8)
 
+
+# Install
+
+Go to https://discordapp.com/developers/applications/me and create a new app. On your app detail page, save the Client ID. You will need it later to authorize your bot for your server.
+
+After creating app, on the app details page, scroll down to the section named bot, and create a bot user. Save the token, you will need it later to run the bot.
+
+install all necessary libraries `pip3 -r requirements.txt`
+
+create "auth.py" to contain one variable "auth_token=" set to the value of your bot's token
+
+python3 nullctf.py
+
 #  How to Use
 >This bot has commands for encoding/decoding, ciphers, and other commonly accessed tools during CTFs.  But, the main use for NullCTF is to easily set up a CTF for your discord server to play as a team.  The following commands listed are probably going to be used the most.
 
